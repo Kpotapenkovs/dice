@@ -2,18 +2,18 @@ import { useState } from "react";
 
 import "./coin.css";
 
-import coin1 from "./assets/dice/dice-1.svg";
-import coin2 from "./assets/dice/dice-2.svg";
+import coin1 from "./assets/coin/coin1.jpg";
+import coin2 from "./assets/coin/coin2.jpg";
 
-const diceImages = [coin1, coin2];
+const coinImages = [coin1, coin2];
 
 function Coin() {
 
-  const [coinValue, setCoinValue] = useState(4);
+  const [coinValue, setCoinValue] = useState(1);
 
-  function rollcoin() {
+  function rollCoin() {
 
-    const randomNumber = Math.floor(Math.random() * 6) + 1;
+    const randomNumber = Math.floor(Math.random() * 2) + 1;
 
     setCoinValue(randomNumber);
   }
@@ -24,9 +24,7 @@ function Coin() {
 
       <h2>Metamā monēta</h2>
 
-    <p>Jūs uzmejāt <strong>{coinValue}</strong></p>
-
-    <button onClick={rollcoin}>Mest</button>
+    <button onClick={rollCoin}>Mest</button>
 
     <img
   src={coinImages[coinValue - 1]}

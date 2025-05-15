@@ -1,7 +1,5 @@
 import "./App.css";
 
-import Dice from "./Dice";
-
 import Coin from "./Coin";
 
 
